@@ -1,3 +1,5 @@
+import 'package:fit_app_dashboard/const/constant.dart';
+import 'package:fit_app_dashboard/screens/main_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -9,12 +11,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Dashboard UI',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+      scaffoldBackgroundColor: backgroundColor,
+      brightness: Brightness.dark,
       ),
-      home: const MyHomePage(),
+      home: const MainScreen(),
     );
   }
 }
